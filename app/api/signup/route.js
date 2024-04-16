@@ -13,7 +13,7 @@ export async function POST(req) {
     }
     const hashPassword = await bcrypt.hash(password, 10);
     try {
-        let user = await new User({ mobile, password: hashPassword});
+        let user = new User({ mobile, password: hashPassword});
         await user.save();
         return NextResponse.json({ msg: "User has been registered", success: true }, { status: 201 })
     } catch (err) {

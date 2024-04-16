@@ -26,6 +26,7 @@ function Login() {
            action.resetForm();
            setError(false);
            localStorage.setItem("jwt_token", res.data.token)
+           window.location.reload();
            router.push('/')
         }else{
             setError(true)
