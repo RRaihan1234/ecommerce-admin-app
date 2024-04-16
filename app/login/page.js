@@ -1,6 +1,6 @@
 "use client"
 import { useFormik } from "formik";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { useRouter } from 'next/navigation'
 import axios from "axios";
 
@@ -82,8 +82,12 @@ function Login() {
 };
 
 const DeciderComponent = () => {
+    const [token, setToken] = useState('')
     const router = useRouter()
-    let token = localStorage.getItem("jwt_token");
+    useEffect(()=>{
+      let jwt = localStorage.getItem("jwt_token");
+      setToken(jwt);
+    },[])
 
     if(token){
        router.push('/')

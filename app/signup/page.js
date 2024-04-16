@@ -112,8 +112,13 @@ function Signup() {
 };
 
 const DeciderComponent = () => {
+    const [token, setToken] = useState('')
     const router = useRouter()
-    let token = localStorage.getItem("jwt_token");
+    useEffect(()=>{
+      let jwt = localStorage.getItem("jwt_token");
+      setToken(jwt);
+    },[])
+    
 
     if(token){
        router.push('/')

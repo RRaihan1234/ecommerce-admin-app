@@ -15,12 +15,16 @@ export default function Home(){
 
   if(!token){
     router.push('/login')
+    return (
+      <main>
+         <Login /> 
+      </main>
+    );
   }
 
   return (
     <main>
-       {!token && <Login />}
-       {token && <HomePage />}
+       <HomePage />
     </main>
   );
 }
