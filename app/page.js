@@ -14,7 +14,7 @@ export default function Home(){
   },[])
 
   if(!token){
-    router.push('/login')
+    //router.push('/login')
     return (
       <main>
          <Login /> 
