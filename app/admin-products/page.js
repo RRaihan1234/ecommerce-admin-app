@@ -37,7 +37,6 @@ export default function AdminProducts(){
         setShowProductAddBtn(true);
         setShowProductAddForm(false);
         getProducts();
-        //window.location.reload();
       },
     });
 

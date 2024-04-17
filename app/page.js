@@ -1,11 +1,9 @@
 "use client"
 import {useEffect, useState} from 'react';
-import { useRouter } from 'next/navigation'
 import HomePage from './home/page'
 import Login from './login/page'
 
 export default function Home(){
-  const router = useRouter()
   const [token, setToken] = useState('')
 
   useEffect(()=>{
@@ -14,7 +12,6 @@ export default function Home(){
   },[])
 
   if(!token){
-    //router.push('/login')
     return (
       <main>
          <Login /> 
