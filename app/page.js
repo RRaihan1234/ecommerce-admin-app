@@ -6,7 +6,7 @@ import Login from './login/page'
 
 export default function Home(){
   const router = useRouter()
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState('')
 
   useEffect(()=>{
     let jwt = localStorage.getItem("jwt_token");
