@@ -47,10 +47,6 @@ export default function AdminProducts(){
     }
 
     useEffect(()=>{
-      window.location.reload();
-  },[products])
-
-    useEffect(()=>{
         getProducts();
     },[])
 
