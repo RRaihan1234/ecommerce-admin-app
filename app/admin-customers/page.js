@@ -37,6 +37,7 @@ export default function AdminCustomers(){
         setShowCustomerAddBtn(true);
         setShowCustomerAddForm(false);
         getCustomers();
+        window.location.reload();
       },
     });
 

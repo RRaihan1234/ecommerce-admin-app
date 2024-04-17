@@ -12,3 +12,6 @@ export const GET = async () => {
         return NextResponse.json("Failed to fetch customers", { status: 500 })
     }
 }
+
+// revalidate every 10 seconds
+export const revalidate = 10;
