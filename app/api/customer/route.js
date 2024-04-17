@@ -13,5 +13,5 @@ export const GET = async () => {
     }
 }
 
-// revalidate every 10 seconds
+
 export const revalidate = 10;

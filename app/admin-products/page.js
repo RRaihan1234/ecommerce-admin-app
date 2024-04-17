@@ -37,7 +37,7 @@ export default function AdminProducts(){
         setShowProductAddBtn(true);
         setShowProductAddForm(false);
         getProducts();
-        window.location.reload();
+        //window.location.reload();
       },
     });
 
@@ -45,6 +45,10 @@ export default function AdminProducts(){
       let res = await axios.get("/api/product");
       setProducts(res.data.reverse());
     }
+
+    useEffect(()=>{
+      window.location.reload();
+  },[products])
 
     useEffect(()=>{
         getProducts();
